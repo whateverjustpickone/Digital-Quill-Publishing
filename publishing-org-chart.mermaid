@@ -1,0 +1,58 @@
+flowchart TD
+    CEO[CEO / Publisher] --> ED[Executive Director]
+    CEO --> CFO[Chief Financial Officer]
+    
+    %% Editorial Division
+    ED --> EIC[Editor in Chief]
+    EIC --> ACQ[Acquisitions Editor]
+    EIC --> DE[Developmental Editor]
+    EIC --> CE[Copy Editor]
+    EIC --> PE[Proofreader]
+    
+    %% Production Division
+    ED --> PD[Production Director]
+    PD --> CD[Creative Director]
+    CD --> CDA[Cover Designer/Artist]
+    CD --> ID[Interior Designer]
+    PD --> PM[Production Manager]
+    PM --> TS[Typography Specialist]
+    PM --> DTP[Desktop Publishing]
+    
+    %% Marketing Division
+    ED --> MKD[Marketing Director]
+    MKD --> PRM[PR Manager]
+    PRM --> SMM[Social Media Manager]
+    MKD --> MMG[Marketing Manager]
+    MMG --> CWR[Copywriter]
+    MMG --> BM[Brand Manager]
+    
+    %% Sales Division
+    ED --> SD[Sales Director]
+    SD --> DM[Distribution Manager]
+    SD --> SM[Sales Manager]
+    SM --> RPS[Rights & Permissions Specialist]
+    
+    %% Digital Division
+    ED --> DD[Digital Director]
+    DD --> WD[Web Developer]
+    DD --> EBP[E-Book Producer]
+    DD --> ADS[Audiobook Development Specialist]
+    
+    %% Reader Feedback System
+    ED --> RFS[Reader Feedback System]
+
+    classDef executive fill:#f9d5e5,stroke:#333,stroke-width:1px
+    classDef editorial fill:#eeeeee,stroke:#333,stroke-width:1px
+    classDef production fill:#d0f0c0,stroke:#333,stroke-width:1px
+    classDef marketing fill:#b5dcf9,stroke:#333,stroke-width:1px
+    classDef sales fill:#ffeb99,stroke:#333,stroke-width:1px
+    classDef digital fill:#d8bfd8,stroke:#333,stroke-width:1px
+    classDef feedback fill:#f7cac9,stroke:#333,stroke-width:1px
+    
+    class CEO,ED,CFO executive
+    class EIC,ACQ,DE,CE,PE editorial
+    class PD,CD,CDA,ID,PM,TS,DTP production
+    class MKD,PRM,SMM,MMG,CWR,BM marketing
+    class SD,DM,SM,RPS sales
+    class DD,WD,EBP,ADS digital
+    class RFS feedback
